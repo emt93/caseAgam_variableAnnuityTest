@@ -39,7 +39,10 @@ a few notable issues arose.
 Future Improvements
 -
 1. __More Funds__: A multivariate stochastic fund returns model could be helpful to model log-normal returns for various funds instead of the simple approach assumed here. Some code has already been to address this, so it would be a relatively minor refactor to implement this.
-2. __Add new features__: Add a more detailed logger to the model. Raise exceptions if needed (e.g., it could be added to the divide_by tool for when we divided by zero).
+2. __Add new features__: 
+   1. Add a more detailed logger to the model. 
+   2. Raise exceptions if needed (e.g., it could be added to the divide_by tool for when we divided by zero).
+   3. Clean up file structure: potentially put all the python script in one folder and another folder for the .xlsx filetypes.
 3. __Add documentation__: Add method and function specific descriptions. In the interest of time, some of these comments/details are mentioned here.
 4. __Reduce complexity and increase readability__: Simplifying the rider charges and phase algorithms. There were some todos left in the code since there were parts that were reviewed since the circular reference in the Excel sheet is not necessarily good to reproduce. In other words, there are some if-statements that are unnecessary, like for phase and how that factors into the Withdrawal Amount calculation. Since we can only be in one phase at a time, that logic can be simplified so that we avoid redundant if-statements. 
 
